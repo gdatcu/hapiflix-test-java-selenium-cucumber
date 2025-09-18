@@ -1,0 +1,43 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Hapiflix_Master_Suite" verbose="2" parallel="methods" thread-count="4">
+    <listeners>
+        <listener class-name="com.hapiflix.tests.ExtentReportListener"/>
+    </listeners>
+    <test name="Smoke_Tests">
+        <groups>
+            <run>
+                <include name="smoke"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.hapiflix.tests.DataDrivenLoginTests"/>
+            <class name="com.hapiflix.tests.ValidationTests"/>
+        </classes>
+    </test>
+
+<!--    <test name="Full_Regression_Suite">-->
+<!--        <groups>-->
+<!--            <run>-->
+<!--                <exclude name="broken"/>-->
+<!--            </run>-->
+<!--        </groups>-->
+<!--        <classes>-->
+<!--            <class name="com.hapiflix.tests.AuthenticationTests"/>-->
+<!--            <class name="com.hapiflix.tests.UserJourneyTests"/>-->
+<!--            <class name="com.hapiflix.tests.com.hapiflix.tests.ValidationTests"/>-->
+<!--            <class name="com.hapiflix.tests.com.hapiflix.tests.DataDrivenLoginTests"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="Validation_Only_Tests">-->
+<!--        <groups>-->
+<!--            <run>-->
+<!--                <include name="validation"/>-->
+<!--            </run>-->
+<!--        </groups>-->
+<!--        <classes>-->
+<!--            <class name="com.hapiflix.tests.com.hapiflix.tests.ValidationTests"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+</suite>
